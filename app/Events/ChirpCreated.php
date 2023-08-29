@@ -10,8 +10,9 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 use App\Models\Chirp;
+use Illuminate\Auth\Events\Registered  as Event;
 
-class ChirpCreated
+class ChirpCreated extends Event
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
